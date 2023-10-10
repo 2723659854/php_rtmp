@@ -1,1 +1,2 @@
 原项目地址：https://github.com/wy3/media-server
+播放器在sync_course 项目的videoController里面
