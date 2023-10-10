@@ -1,0 +1,27 @@
+{
+    "name": "wy3/media-server",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wy3",
+            "email": "908005070@qq.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "ext-json": "*",
+        "evenement/evenement": "^3.0",
+        "apix/log": "^1.2",
+        "workerman/workerman": "^4.1",
+        "react/promise": "^2.9"
+    },
+    "autoload": {
+        "psr-4": { 
+            "MediaServer\\": "src"
+        }
+    },
+    "files": [
+        "src/functions.php"
+    ]
+}
