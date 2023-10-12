@@ -53,12 +53,14 @@ class VideoFrame extends BinaryStream implements MediaFrame
     }
 
 
+    /** 获取视频编码名称 */
     public function getVideoCodecName()
     {
         return self::VIDEO_CODEC_NAME[$this->codecId];
     }
 
 
+    /** 初始化视频编码格式 */
     public function __construct($data, $timestamp = 0)
     {
         parent::__construct($data);
@@ -76,6 +78,7 @@ class VideoFrame extends BinaryStream implements MediaFrame
     protected $avcPacket;
 
     /**
+     * 获取视频帧数据
      * @return AVCPacket
      */
     public function getAVCPacket()

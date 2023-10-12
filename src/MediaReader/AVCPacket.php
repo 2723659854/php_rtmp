@@ -7,6 +7,9 @@ namespace MediaServer\MediaReader;
 
 use MediaServer\Utils\BinaryStream;
 
+/**
+ * @purpose 视频数据包
+ */
 class AVCPacket
 {
     const AVC_PACKET_TYPE_SEQUENCE_HEADER = 0;
@@ -20,13 +23,16 @@ class AVCPacket
     public $stream;
 
     /**
+     * 视频数据包初始化
      * AVCPacket constructor.
      * @param $stream BinaryStream
      */
     public function __construct($stream)
     {
         $this->stream=$stream;
+        /** 视频数据包编码格式 */
         $this->avcPacketType=$stream->readTinyInt();
+        /** 获取包创建时间 */
         $this->compositionTime=$stream->readInt24();
     }
 
@@ -37,6 +43,7 @@ class AVCPacket
     protected $avcSequenceParameterSet;
 
     /**
+     * 获取画面帧的参数
      * @return AVCSequenceParameterSet
      */
     public function getAVCSequenceParameterSet(){
