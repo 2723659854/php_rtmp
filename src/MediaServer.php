@@ -157,7 +157,7 @@ class MediaServer
 
 
     /**
-     *
+     * 添加推流
      * @param PublishStreamInterface $stream
      * @return mixed
      */

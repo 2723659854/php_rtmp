@@ -1,0 +1,16 @@
+2023-10-11 10:51:05 pid:1 Error: Call to a member function close() on null in E:\yanglong\media-server\src\Rtmp\RtmpPlayerTrait.php:175
+Stack trace:
+#0 E:\yanglong\media-server\src\MediaServer.php(185): MediaServer\Rtmp\RtmpStream->playClose()
+#1 E:\yanglong\media-server\vendor\evenement\evenement\src\Evenement\EventEmitterTrait.php(123): MediaServer\MediaServer::MediaServer\{closure}()
+#2 E:\yanglong\media-server\src\Rtmp\RtmpTrait.php(95): Evenement\EventEmitter->emit('on_close')
+#3 E:\yanglong\media-server\src\Rtmp\RtmpStream.php(241): MediaServer\Rtmp\RtmpStream->stop()
+#4 E:\yanglong\media-server\vendor\evenement\evenement\src\Evenement\EventEmitterTrait.php(123): MediaServer\Rtmp\RtmpStream->onStreamClose()
+#5 E:\yanglong\media-server\src\Utils\WMBufferStream.php(38): MediaServer\Utils\WMBufferStream->emit('onClose')
+#6 E:\yanglong\media-server\vendor\workerman\workerman\Connection\TcpConnection.php(928): MediaServer\Utils\WMBufferStream->_onClose(Object(Workerman\Connection\TcpConnection))
+#7 E:\yanglong\media-server\vendor\workerman\workerman\Connection\TcpConnection.php(588): Workerman\Connection\TcpConnection->destroy()
+#8 E:\yanglong\media-server\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #22)
+#9 E:\yanglong\media-server\vendor\workerman\workerman\Worker.php(1479): Workerman\Events\Select->loop()
+#10 E:\yanglong\media-server\vendor\workerman\workerman\Worker.php(1399): Workerman\Worker::forkWorkersForWindows()
+#11 E:\yanglong\media-server\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#12 E:\yanglong\media-server\start.php(24): Workerman\Worker::runAll()
+#13 {main}
